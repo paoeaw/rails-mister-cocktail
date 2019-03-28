@@ -1,8 +1,12 @@
 <div class="container">
-  <h1>Cocktails</h1>
-  <% @cocktails.each do |cocktail| %>
-  <h3><%= cocktail.name %></h3>
-  <%= link_to "See more", cocktail_path(id: cocktail['id']) %>
-  <% end %>
-  <%= link_to "Add a cocktail", new_cocktail_path %>
+  <div class="logo d-flex justify-content-around align-items-center">
+    <%= image_tag "cocktail-logo.png", alt: "cocktail", width: 250 %>
+  </div>
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <div class="cocktail-card d-flex justify-content-around align-items-center">
+      <h3><%= link_to cocktail.name, cocktail_path(id: cocktail['id']), class: 'cocktail-name' %></h3>
+    </div>
+    <% end %>
+  </div>
 </div>

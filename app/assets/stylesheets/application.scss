@@ -11,3 +11,37 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-color: #121313;
+  color: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cocktail-card {
+  background-image: url('https://loremflickr.com/g/300/300/cocktail');
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 60px;
+}
+
+.cocktail-name {
+  color: white;
+}
+
+.logo {
+  height: 700px;
+}
+
+.add-cocktail {
+  color: white;
+  &:hover {
+    opacity: 0.5;
+    text-decoration: none !important;
+  }
+}
