@@ -14,7 +14,7 @@
 
   <body>
     <div class="navbar fixed-top justify-content-end">
-      <%= link_to raw("<span class='add-cocktail'><i class='fas fa-cocktail'></i>&nbsp;Add a cocktail</span>"), new_cocktail_path %>
+      <%= link_to raw("<span><i class='fas fa-cocktail'></i>&nbsp;Add a cocktail</span>"), new_cocktail_path, class: 'add-cocktail' %>
     </div>
     <%= yield %>
 

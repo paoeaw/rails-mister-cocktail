@@ -32,6 +32,11 @@ body {
 
 .cocktail-name {
   color: white;
+    &:hover {
+    color: white;
+    opacity: 0.5;
+    text-decoration: none !important;
+  }
 }
 
 .logo {
@@ -41,6 +46,7 @@ body {
 .add-cocktail {
   color: white;
   &:hover {
+    color: white;
     opacity: 0.5;
     text-decoration: none !important;
   }
