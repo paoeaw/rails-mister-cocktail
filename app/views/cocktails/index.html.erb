@@ -4,7 +4,11 @@
   </div>
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
-    <div class="cocktail-card d-flex justify-content-around align-items-center">
+    <% if cocktail.photo.present? %>
+      <div class="cocktail-card d-flex justify-content-around align-items-center" style="background-image: url('<%= cl_image_path cocktail.photo %>')";>
+    <% else %>
+    <div class="cocktail-card d-flex justify-content-around align-items-center" style="background-color: grey";>
+    <% end %>
       <h3><%= link_to cocktail.name, cocktail_path(id: cocktail['id']), class: 'cocktail-name' %></h3>
     </div>
     <% end %>
