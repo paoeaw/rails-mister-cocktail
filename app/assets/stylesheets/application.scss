@@ -43,10 +43,24 @@ body {
   height: 700px;
 }
 
-.add-cocktail {
+.add-cocktail, .home-button, .add-dose, .delete-button {
   color: white;
   &:hover {
     color: white;
+    opacity: 0.5;
+    text-decoration: none !important;
+  }
+}
+
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.delete-button {
+  color: #db2d43;
+  &:hover {
+    color: #db2d43;
     opacity: 0.5;
     text-decoration: none !important;
   }

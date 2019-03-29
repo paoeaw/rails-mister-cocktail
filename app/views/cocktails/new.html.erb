@@ -1,5 +1,7 @@
 <div class="container">
-  <h1>Add new cocktail</h1>
-  <%= render 'form', cocktail: @cocktail %>
-  <%= link_to "Back", cocktails_path %>
+  <div class="form pb-4 mb-3">
+    <h1 class="mt-5 mb-3">Add new cocktail</h1>
+    <%= render 'form', cocktail: @cocktail %>
+  </div>
+  <%= link_to raw("<small><i class='fas fa-undo-alt'></i></small>&nbsp;Return to cocktail list"), cocktails_path, class: 'home-button' %>
 </div>

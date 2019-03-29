@@ -1,10 +1,14 @@
 <div class="container">
-  <h2><%= @cocktail.name %></h2>
-  <%= link_to "Add dose", new_cocktail_dose_path(@cocktail.id) %>
-  <ul>
+  <h2 class="mt-5 mb-3"><%= @cocktail.name %></h2>
+  <%= cl_image_tag @cocktail.photo, height: 500, width: 400, crop: :fill %>
+  <br>
+  <h6 class="mt-5">Ingredients:</h6>
+  <ul class="border-bottom py-3">
     <% @cocktail.doses.each do |dose| %>
-      <li><%= dose.description %>&nbsp;<%= dose.ingredient.name %> <%= link_to raw("<span><i class='fas fa-backspace'></i></span>"), dose_path(dose.id), method: :delete, data: { confirm: "Are you sure?"} %></li>
+      <li><%= dose.description %>&nbsp;<%= dose.ingredient.name %> <%= link_to raw("<span><i class='fas fa-backspace'></i></span>"), dose_path(dose.id), method: :delete, data: { confirm: "Are you sure?"}, class: 'delete-button' %></li>
     <% end %>
   </ul>
-  <%= link_to "Back", cocktails_path %>
+  <%= link_to raw("<small><i class='fas fa-plus'></i></small>&nbsp;Add dose"), new_cocktail_dose_path(@cocktail.id), class: 'add-dose' %>
+  <br>
+  <%= link_to raw("<small><i class='fas fa-undo-alt'></i></small>&nbsp;Return to cocktail list"), cocktails_path, class: 'home-button' %>
 </div>

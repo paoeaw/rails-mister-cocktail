@@ -13,7 +13,8 @@
   </head>
 
   <body>
-    <div class="navbar fixed-top justify-content-end">
+    <div class="navbar fixed-top justify-content-between">
+      <h5> <%= link_to "cocktail", cocktails_path, class: 'home-button' %></h5>
       <%= link_to raw("<span><i class='fas fa-cocktail'></i>&nbsp;Add a cocktail</span>"), new_cocktail_path, class: 'add-cocktail' %>
     </div>
     <%= yield %>
